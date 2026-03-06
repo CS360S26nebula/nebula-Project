@@ -4,8 +4,8 @@
 - [Team Information](#team-information)
 
 - [Meeting Minutes](#meeting-minutes)
-  - [Meeting – Feb 25, 2026](#meeting--feb-17-2026)
-  -  [Meeting – Feb 25, 2026](#meeting--feb-25-2026)
+  - [Meeting – Feb 17, 2026](#meeting--feb-17-2026)
+  - [Meeting – Feb 25, 2026](#meeting--feb-25-2026)
   - [Meeting – TBD](#meeting--tbd)
 
 - [UML Diagrams](#uml-diagrams)
@@ -173,5 +173,6 @@ _Add screenshots or links to wireframe images._
 ### Wireframes – Project Part 3
 
 _Add screenshots or links to wireframe images._
+
 
 
