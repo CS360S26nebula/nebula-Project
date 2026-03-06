@@ -22,16 +22,15 @@
 ---
 
 ## Team Information
-- **Team Name:** _TBD_
+- **Team Name:** _Nebula_
 
-| Name               | Roll Number | GitHub ID |
-|--------------------|-------------|-----------|
-| Dillon Allan       | dallan      | dallan    |
-| Anmol Dhaliwal     | asd1        | asd1      |
-| Amir Hansen        | ahansen1    | ahansen1  |
-| Michael Kwok       | mkwok1      | mkwok1    |
-| Jehanzeb Mirza     | jehanzeb    | jehanzeb  |
-| Tharidu Witharana  | tharidu     | tharidu   |
+| Name               | Roll Number | GitHub ID                 |
+|--------------------|-------------|---------------------------|
+| Abdullah Ahmad     | 27100387    | abdullah-ahmad-915-nlp    |
+| Ali Azhar          | 27100083    | Ali-5987                  |
+| Moiz Imran         | 26100421    | MoizImran01               |
+| Muhammad Yahya Ali | 27100160    | MYA-1635                  |
+| Umer Ashraf        | 27100236    | UmerAshraf-236            |
 
 ---
 
@@ -167,4 +166,5 @@ _Add screenshots or links to wireframe images._
 _Add screenshots or links to wireframe images._
 
 ### Wireframes – Project Part 3
+
 _Add screenshots or links to wireframe images._
