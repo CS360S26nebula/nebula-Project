@@ -90,9 +90,41 @@ Duration: 1 hour 15 minutes
 ---
 
 #### CRC Analysis
-Class Name,Faculty 
-Responsibilities,• Create an expected-visitor request before the guest arrives (CNIC + phone number). • Receive ad-hoc visitor requests (when a guest shows up unexpectedly). • Accept or reject an ad-hoc request. • Provide basic host info needed for verification. 
-Collaborators,• Administration • Security • Visitor • Logs • Request 
+### CRC Cards Analysis
+
+| Class Name | Responsibilities | Collaborators |
+| :--- | :--- | :--- |
+| **Faculty** | • Create an expected-visitor request before the guest arrives (CNIC + phone number).<br>• Receive ad-hoc visitor requests (when a guest shows up unexpectedly).<br>• Accept or reject an ad-hoc request.<br>• Provide basic host info needed for verification. | • Administration<br>• Security<br>• Visitor<br>• Logs<br>• Request |
+
+---
+
+| Class Name | Responsibilities | Collaborators |
+| :--- | :--- | :--- |
+| **Administration** | • Create login credentials for Faculty and Security (by default).<br>• Control access rules (who can view/edit what).<br>• Maintain the blacklist (since it already exists).<br>• View all requests and logs (full system visibility). | • Administration<br>• Security<br>• Visitor<br>• Logs<br>• Request |
+
+---
+
+| Class Name | Responsibilities | Collaborators |
+| :--- | :--- | :--- |
+| **Security** | • Verify visitors at the gate using CNIC + phone.<br>• Check blacklist status before allowing entry.<br>• For expected visitors: find the matching request and proceed.<br>• For ad-hoc visitors: create a new request and send it to Faculty for approval.<br>• Create gate visit logs for time-in (entry) and time-out (exit).<br>• Follow access rules (security can log visits but cannot edit old records). | • Administration<br>• Security<br>• Visitor<br>• Logs<br>• Request |
+
+---
+
+| Class Name | Responsibilities | Collaborators |
+| :--- | :--- | :--- |
+| **Visitor** | • Store visitor identifiers (CNIC + phone number).<br>• Be searchable by CNIC/phone/plate for gate verification.<br>• Link to a Request (expected or ad-hoc) or a Log entry (time-in/time-out record). | • Administration<br>• Security<br>• Visitor<br>• Logs<br>• Request |
+
+---
+
+| Class Name | Responsibilities | Collaborators |
+| :--- | :--- | :--- |
+| **Logs** | • Store gate activity (time-in, time-out, which security person logged it).<br>• Store key approval outcomes (especially ad-hoc accept/reject result).<br>• Provide admin a reliable record of what happened (who entered, who left, when). | • Administration<br>• Security<br>• Visitor<br>• Logs<br>• Request |
+
+---
+
+| Class Name | Responsibilities | Collaborators |
+| :--- | :--- | :--- |
+| **Request** | • Store request details (visitor CNIC + phone number, host name, request type: expected or ad-hoc).<br>• For ad-hoc requests, set status as pending, send to faculty for accept/reject and then store the final decision.<br>• Act as the source of truth for whether a visitor is allowed to enter. | • Administration<br>• Security<br>• Visitor<br>• Logs<br>• Request |
 
 ---
 
@@ -153,6 +185,7 @@ _Add screenshots or links to wireframe images._
 ### Wireframes – Project Part 3
 
 _Add screenshots or links to wireframe images._
+
 
 
 
