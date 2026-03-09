@@ -1,4 +1,4 @@
-# Project Documentation
+# Campus Gate Access System
 
 ## Table of Contents
 - [Team Information](#team-information)
@@ -16,7 +16,7 @@
   - [Product Backlog – Project Part 2](#product-backlog--project-part-2)
   - [Product Backlog – Project Part 3](#product-backlog--project-part-3)
 
-- [Wireframes](#wireframes)
+- [Links](#Links)
   - [Wireframes – Project Part 1](#wireframes--project-part-1)
   - [Wireframes – Project Part 2](#wireframes--project-part-2)
   - [Wireframes – Project Part 3](#wireframes--project-part-3)
@@ -148,13 +148,8 @@ Duration: 1 hour 15 minutes
 
 ---
 
-### Meeting – TBD
-_Content to be added._
-
----
-
 ## UML Diagrams
-_Add UML diagrams here or link images from the repository._
+_Will be added in next phase_
 
 ---
 
@@ -174,17 +169,14 @@ _Add UML diagrams here or link images from the repository._
 
 ---
 
-## Wireframes
+### Links
 
-### Wireframes – Project Part 1
-_Add screenshots or links to wireframe images._
+### Figma StoryBoard
+[Link to storyboard](https://www.figma.com/design/9Me5uaUCRX8WqCouXx7nPc/CS-360-Project-Part-2-Storyboard)
 
-### Wireframes – Project Part 2
-_Add screenshots or links to wireframe images._
+### Project Backlog
+[Link for Github KanBan Board](https://github.com/orgs/CS360S26nebula/projects/3/views/1)
 
-### Wireframes – Project Part 3
-
-_Add screenshots or links to wireframe images._
 
 
 
