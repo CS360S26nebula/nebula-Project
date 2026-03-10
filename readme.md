@@ -188,6 +188,11 @@ Product Backlog is also available in the kanban board linked at the end of this 
 ### Figma StoryBoard
 [Link to storyboard](https://www.figma.com/design/9Me5uaUCRX8WqCouXx7nPc/CS-360-Project-Part-2-Storyboard?node-id=137-1691&t=9reMOKxj25ZCYS2n-1)
 
+### Project Backlog
+[Link for Github KanBan Board](https://github.com/orgs/CS360S26nebula/projects/3/views/1)
+
+### Screenshots
+
 ### StoryBoard Screenshots
 
 ### Without Arrows
@@ -196,14 +201,12 @@ Product Backlog is also available in the kanban board linked at the end of this 
 ### With Arrows
 <img width="1117" height="905" alt="storyboardarrows" src="https://github.com/user-attachments/assets/7563ca0d-195e-463b-bbeb-40d93d802d35" />
 
-### Project Backlog
-[Link for Github KanBan Board](https://github.com/orgs/CS360S26nebula/projects/3/views/1)
-
 ### Wireframes – Project Part 2
 _Add screenshots or links to wireframe images._
 
 ### Wireframes – Project Part 3
 _Add screenshots or links to wireframe images._
+
 
 
 
