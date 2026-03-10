@@ -182,10 +182,11 @@ Product Backlog is also available in the kanban board linked at the end of this 
 ### Links
 
 ### Figma StoryBoard
-[Link to storyboard](https://www.figma.com/design/9Me5uaUCRX8WqCouXx7nPc/CS-360-Project-Part-2-Storyboard)
+[Link to storyboard]([https://www.figma.com/design/9Me5uaUCRX8WqCouXx7nPc/CS-360-Project-Part-2-Storyboard](https://www.figma.com/design/9Me5uaUCRX8WqCouXx7nPc/CS-360-Project-Part-2-Storyboard?node-id=137-1691&t=ImF9l60QaJtHEnKy-1))
 
 ### Project Backlog
 [Link for Github KanBan Board](https://github.com/orgs/CS360S26nebula/projects/3/views/1)
+
 
 
 
