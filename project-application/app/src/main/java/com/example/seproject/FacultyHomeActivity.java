@@ -1,0 +1,77 @@
+package com.example.seproject;
+
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class FacultyHomeActivity extends AppCompatActivity {
+
+    private static final int COLOR_ACTIVE   = 0xFF27374D;
+    private static final int COLOR_INACTIVE = 0xFF111111;
+
+    private ImageView navHomeIcon, navDownloadIcon, navPassesIcon, navProfileIcon;
+    private TextView  navHomeText, navDownloadText, navPassesText, navProfileText;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_faculty_home);
+
+        navHomeIcon     = findViewById(R.id.navHomeIcon);
+        navDownloadIcon = findViewById(R.id.navDownloadIcon);
+        navPassesIcon   = findViewById(R.id.navPassesIcon);
+        navProfileIcon  = findViewById(R.id.navProfileIcon);
+
+        navHomeText     = findViewById(R.id.navHomeText);
+        navDownloadText = findViewById(R.id.navDownloadText);
+        navPassesText   = findViewById(R.id.navPassesText);
+        navProfileText  = findViewById(R.id.navProfileText);
+
+        LinearLayout navHome          = findViewById(R.id.navHome);
+        LinearLayout navDownload      = findViewById(R.id.navDownload);
+        LinearLayout navSubmitRequest = findViewById(R.id.navSubmitRequest);
+        LinearLayout navPasses        = findViewById(R.id.navPasses);
+        LinearLayout navProfile       = findViewById(R.id.navProfile);
+
+        navHome.setOnClickListener(v          -> activateTab(0));
+        navDownload.setOnClickListener(v      -> activateTab(1));
+        navSubmitRequest.setOnClickListener(v -> activateTab(2));
+        navPasses.setOnClickListener(v        -> activateTab(3));
+        navProfile.setOnClickListener(v       -> activateTab(4));
+
+        activateTab(0);
+    }
+
+    private void activateTab(int tab) {
+        int[] outlineIcons = {
+            R.drawable.ic_home,
+            R.drawable.ic_download,
+            R.drawable.ic_passes,
+            R.drawable.ic_profile
+        };
+        int[] filledIcons = {
+            R.drawable.ic_home_filled,
+            R.drawable.ic_download_filled,
+            R.drawable.ic_passes_filled,
+            R.drawable.ic_profile_filled
+        };
+
+        ImageView[] icons = { navHomeIcon, navDownloadIcon, navPassesIcon, navProfileIcon };
+        TextView[]  texts = { navHomeText, navDownloadText, navPassesText, navProfileText };
+
+        int iconIndex = (tab < 2) ? tab : (tab > 2) ? tab - 1 : -1;
+
+        for (int i = 0; i < icons.length; i++) {
+            boolean isActive = (i == iconIndex);
+            icons[i].setImageResource(isActive ? filledIcons[i] : outlineIcons[i]);
+            icons[i].setColorFilter(
+                new PorterDuffColorFilter(isActive ? COLOR_ACTIVE : COLOR_INACTIVE,
+                    PorterDuff.Mode.SRC_IN));
+            texts[i].setTextColor(isActive ? COLOR_ACTIVE : COLOR_INACTIVE);
+        }
+    }
+}
