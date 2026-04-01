@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="28dp"
+        android:paddingTop="54dp"
+        android:paddingBottom="32dp">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+
+        android:contentDescription="Back"
+        android:src="@drawable/keyboard_backspace"
+        app:tint="#374D5E" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-24dp"
+        android:layout_marginBottom="25sp"
+        android:gravity="center"
+        android:text="Black-List User"
+        android:textColor="#27374D"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name of User"
+                android:textColor="#1E1E1E"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/bg_input"
+                android:drawableStart="@drawable/person_dark"
+                android:drawablePadding="8dp"
+                android:hint="Enter full name"
+                android:paddingHorizontal="12dp"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Role"
+                android:textColor="#1E1E1E"
+                android:textSize="13sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/bg_input"
+                android:paddingHorizontal="10dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/person_dark" />
+                <Spinner
+                    android:id="@+id/sp_role"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:paddingStart="24dp"
+                    android:spinnerMode="dropdown" />
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/keyboard_arrow_down" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CNIC Number"
+                android:textColor="#1E1E1E"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/et_cnic"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/bg_input"
+                android:drawableStart="@drawable/identificationcard"
+                android:drawablePadding="8dp"
+                android:hint="Enter CNIC Number"
+                android:paddingHorizontal="12dp"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Black-list reason"
+                android:textColor="#1E1E1E"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/et_reason"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_input"
+                android:drawableStart="@drawable/black_list_reason"
+                android:drawablePadding="8dp"
+                android:hint="Enter Reason"
+                android:paddingHorizontal="12dp"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Date"
+                android:textColor="#1E1E1E"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/bg_input">
+                    <Spinner android:id="@+id/sp_start_date" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@android:color/transparent"/>
+                    <ImageView android:layout_width="13dp" android:layout_height="13dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:layout_marginEnd="8dp" android:src="@drawable/keyboard_arrow_down"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/bg_input">
+                    <Spinner android:id="@+id/sp_start_month" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@android:color/transparent"/>
+                    <ImageView android:layout_width="13dp" android:layout_height="13dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:layout_marginEnd="8dp" android:src="@drawable/keyboard_arrow_down"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_input">
+                    <Spinner android:id="@+id/sp_start_year" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@android:color/transparent"/>
+                    <ImageView android:layout_width="13dp" android:layout_height="13dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:layout_marginEnd="8dp" android:src="@drawable/keyboard_arrow_down"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Start Time\n(12:00am if not filled)"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+                <RelativeLayout
+                    android:layout_width="92dp"
+                    android:layout_height="33dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/bg_input_time">
+                    <Spinner
+                        android:id="@+id/sp_start_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:paddingStart="8dp" />
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/keyboard_arrow_down" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="72dp"
+                    android:layout_height="33dp"
+                    android:background="@drawable/bg_input_time">
+                    <Spinner
+                        android:id="@+id/sp_start_ampm"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:paddingStart="8dp" />
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/keyboard_arrow_down" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End Date"
+                android:textColor="#1E1E1E"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/bg_input">
+                    <Spinner android:id="@+id/sp_end_date" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@android:color/transparent"/>
+                    <ImageView android:layout_width="13dp" android:layout_height="13dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:layout_marginEnd="8dp" android:src="@drawable/keyboard_arrow_down"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/bg_input">
+                    <Spinner android:id="@+id/sp_end_month" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@android:color/transparent"/>
+                    <ImageView android:layout_width="13dp" android:layout_height="13dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:layout_marginEnd="8dp" android:src="@drawable/keyboard_arrow_down"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_input">
+                    <Spinner android:id="@+id/sp_end_year" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@android:color/transparent"/>
+                    <ImageView android:layout_width="13dp" android:layout_height="13dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:layout_marginEnd="8dp" android:src="@drawable/keyboard_arrow_down"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="End Time\n(12:00am if not filled)"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+                <RelativeLayout
+                    android:layout_width="92dp"
+                    android:layout_height="33dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/bg_input_time">
+                    <Spinner
+                        android:id="@+id/sp_end_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:paddingStart="8dp" />
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/keyboard_arrow_down" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="72dp"
+                    android:layout_height="33dp"
+                    android:background="@drawable/bg_input_time">
+                    <Spinner
+                        android:id="@+id/sp_end_ampm"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:paddingStart="8dp" />
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/keyboard_arrow_down" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_blacklist"
+        android:layout_width="match_parent"
+            android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:text="Black-List"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:backgroundTint="#27374D"
+        app:cornerRadius="6dp" />
+
+    </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

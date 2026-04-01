@@ -6,7 +6,12 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.DocumentSnapshot;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -58,28 +63,75 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void fetchUserRoleAndRedirect(String userId) {
-
         db.collection("users").document(userId).get()
                 .addOnSuccessListener(documentSnapshot -> {
-                    if (documentSnapshot.exists()) {
-                        User user = documentSnapshot.toObject(User.class);
-                        String role = user.getRole();
-
-
-                        if ("Guard".equals(role)) {
-                            startActivity(new Intent(LoginActivity.this, GuardHomeActivity.class));
-                        } else if ("Admin".equals(role)) {
-                            startActivity(new Intent(LoginActivity.this, AdminHomeActivity.class));
-                        } else if ("Faculty".equals(role)) {
-                            startActivity(new Intent(LoginActivity.this, FacultyHomeActivity.class));
-                        }
-                        finish();
-                    } else {
+                    if (!documentSnapshot.exists()) {
                         Toast.makeText(this, "User data not found in database.", Toast.LENGTH_SHORT).show();
+                        return;
                     }
+                    if (isUserCurrentlyBlocked(documentSnapshot)) {
+                        mAuth.signOut();
+                        Toast.makeText(
+                                this,
+                                "Your account has been blocked by the admin. Contact admin support.",
+                                Toast.LENGTH_LONG
+                        ).show();
+                        return;
+                    }
+                    clearExpiredBlacklistIfNeeded(userId, documentSnapshot);
+
+                    User user = documentSnapshot.toObject(User.class);
+                    if (user == null) {
+                        Toast.makeText(this, "User data not found in database.", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    String role = user.getRole();
+                    if ("Guard".equals(role)) {
+                        startActivity(new Intent(LoginActivity.this, GuardHomeActivity.class));
+                    } else if ("Admin".equals(role)) {
+                        startActivity(new Intent(LoginActivity.this, AdminHomeActivity.class));
+                    } else if ("Faculty".equals(role)) {
+                        startActivity(new Intent(LoginActivity.this, FacultyHomeActivity.class));
+                    }
+                    finish();
                 })
-                .addOnFailureListener(e -> {
-                    Toast.makeText(this, "Error fetching data", Toast.LENGTH_SHORT).show();
-                });
+                .addOnFailureListener(e -> Toast.makeText(this, "Error fetching data", Toast.LENGTH_SHORT).show());
+    }
+
+    private boolean isUserCurrentlyBlocked(DocumentSnapshot snapshot) {
+        Boolean isBlacklisted = snapshot.getBoolean("isBlacklisted");
+        Long startMillis = snapshot.getLong("blacklistStartTimeMiliseconds");
+        Long endMillis = snapshot.getLong("blacklistEndTimeMilliseconds");
+        if (isBlacklisted == null || !isBlacklisted || startMillis == null || endMillis == null) {
+            return false;
+        }
+        long now = System.currentTimeMillis();
+        if(now >= startMillis && now <= endMillis){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    private void clearExpiredBlacklistIfNeeded(String userId, DocumentSnapshot snapshot) {
+        Boolean isBlacklisted = snapshot.getBoolean("isBlacklisted");
+        Long endMillis = snapshot.getLong("blacklistEndTimeMilliseconds");
+        if (isBlacklisted == null || !isBlacklisted || endMillis == null) {
+            return;
+        }
+        long now = System.currentTimeMillis();
+        if (now <= endMillis) {
+            return;
+        }
+
+        Map<String, Object> updates = new HashMap<>();
+        updates.put("isBlacklisted", false);
+        updates.put("blacklistReason", FieldValue.delete());
+        updates.put("blacklistedByAdmin", false);
+        updates.put("blacklistStartTimeMiliseconds", FieldValue.delete());
+        updates.put("blacklistEndTimeMilliseconds", FieldValue.delete());
+        updates.put("blacklistUpdatedAt", now);
+        db.collection("users").document(userId).update(updates);
     }
 }

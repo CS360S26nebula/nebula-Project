@@ -1,5 +1,6 @@
 package com.example.seproject;
 
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import com.example.seproject.admin.AdminMenuHostActivity;
 
 public class AdminHomeActivity extends AppCompatActivity {
 
@@ -39,24 +41,37 @@ public class AdminHomeActivity extends AppCompatActivity {
 
         navHome.setOnClickListener(v      -> activateTab(0));
         navScan.setOnClickListener(v      -> activateTab(1));
-        navAdminMenu.setOnClickListener(v -> activateTab(2));
+        navAdminMenu.setOnClickListener(v -> {
+            activateTab(2);
+            startActivity(new Intent(AdminHomeActivity.this, AdminMenuHostActivity.class));
+        });
         navPasses.setOnClickListener(v    -> activateTab(3));
-        navProfile.setOnClickListener(v   -> activateTab(4));
+        navProfile.setOnClickListener(v -> {
+            activateTab(4);
+            startActivity(new Intent(AdminHomeActivity.this, ProfileActivity.class));
+        });
 
+        activateTab(0);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Reset to dashboard tab when coming back from ProfileActivity.
         activateTab(0);
     }
 
     private void activateTab(int tab) {
         int[] outlineIcons = {
-            R.drawable.ic_home,
-            R.drawable.ic_scan,
-            R.drawable.ic_passes,
+            R.drawable.home,
+            R.drawable.qr_code_scanner,
+            R.drawable.file,
             R.drawable.ic_profile
         };
         int[] filledIcons = {
-            R.drawable.ic_home_filled,
-            R.drawable.ic_scan_filled,
-            R.drawable.ic_passes_filled,
+            R.drawable.home_filled,
+            R.drawable.qr_code_scanner,
+            R.drawable.file_filled,
             R.drawable.ic_profile_filled
         };
 

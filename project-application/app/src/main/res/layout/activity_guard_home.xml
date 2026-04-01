@@ -13,12 +13,12 @@
         android:id="@+id/scrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:scrollbars="none"
         android:fillViewport="true"
-        app:layout_constraintTop_toTopOf="parent"
+        android:scrollbars="none"
         app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,44 +31,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="20dp"
-                android:paddingEnd="20dp"
                 android:paddingTop="28dp"
+                android:paddingEnd="20dp"
                 android:paddingBottom="6dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true">
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginTop="20sp"
                         android:text="Dashboard"
+                        android:textColor="#111111"
                         android:textSize="28sp"
-                        android:textStyle="bold"
-                        android:textColor="#111111" />
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/greeting"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginTop="2dp"
                         android:text="Welcome Back, Guard"
-                        android:textSize="14sp"
                         android:textColor="#888888"
-                        android:layout_marginTop="2dp" />
+                        android:textSize="14sp" />
                 </LinearLayout>
 
-                <!-- Bell icon: hollow/outline -->
                 <ImageView
                     android:id="@+id/bellIcon"
-                    android:layout_width="26dp"
-                    android:layout_height="26dp"
-                    android:src="@drawable/ic_bell"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true" />
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/notifications" />
             </RelativeLayout>
 
             <!-- ======== STATUS CARDS GRID ======== -->
@@ -77,8 +79,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingStart="20dp"
-                android:paddingEnd="20dp"
-                android:paddingTop="16dp">
+                android:paddingTop="16dp"
+                android:paddingEnd="20dp">
 
                 <!-- Row 1: Approved + Rejected -->
                 <LinearLayout
@@ -91,10 +93,10 @@
                         android:layout_width="0dp"
                         android:layout_height="76dp"
                         android:layout_weight="1"
-                        android:orientation="horizontal"
                         android:background="@drawable/badge_approved"
-                        android:padding="14dp"
-                        android:gravity="center_vertical">
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="14dp">
 
                         <ImageView
                             android:layout_width="24dp"
@@ -105,22 +107,22 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_marginStart="10dp">
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Approved"
                                 android:textColor="#111111"
-                                android:textStyle="bold"
-                                android:textSize="14sp" />
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
                                 android:text="10"
                                 android:textColor="#333333"
-                                android:textSize="13sp"
-                                android:layout_marginTop="3dp" />
+                                android:textSize="13sp" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -131,10 +133,10 @@
                         android:layout_width="0dp"
                         android:layout_height="76dp"
                         android:layout_weight="1"
-                        android:orientation="horizontal"
                         android:background="@drawable/badge_rejected"
-                        android:padding="14dp"
-                        android:gravity="center_vertical">
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="14dp">
 
                         <ImageView
                             android:layout_width="24dp"
@@ -145,22 +147,22 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_marginStart="10dp">
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Rejected"
                                 android:textColor="#111111"
-                                android:textStyle="bold"
-                                android:textSize="14sp" />
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
                                 android:text="10"
                                 android:textColor="#333333"
-                                android:textSize="13sp"
-                                android:layout_marginTop="3dp" />
+                                android:textSize="13sp" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -169,18 +171,18 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:id="@+id/preapprovedBox"
                         android:layout_width="0dp"
                         android:layout_height="76dp"
                         android:layout_weight="1"
-                        android:orientation="horizontal"
                         android:background="@drawable/badge_preapproved"
-                        android:padding="14dp"
-                        android:gravity="center_vertical">
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="14dp">
 
                         <ImageView
                             android:layout_width="24dp"
@@ -191,22 +193,22 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_marginStart="10dp">
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Pre-Approved"
                                 android:textColor="#111111"
-                                android:textStyle="bold"
-                                android:textSize="13sp" />
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
                                 android:text="10"
                                 android:textColor="#333333"
-                                android:textSize="13sp"
-                                android:layout_marginTop="3dp" />
+                                android:textSize="13sp" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -217,10 +219,10 @@
                         android:layout_width="0dp"
                         android:layout_height="76dp"
                         android:layout_weight="1"
-                        android:orientation="horizontal"
                         android:background="@drawable/badge_blacklisted"
-                        android:padding="14dp"
-                        android:gravity="center_vertical">
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="14dp">
 
                         <ImageView
                             android:layout_width="24dp"
@@ -231,106 +233,99 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_marginStart="10dp">
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Black-listed"
                                 android:textColor="#111111"
-                                android:textStyle="bold"
-                                android:textSize="14sp" />
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
                                 android:text="10"
                                 android:textColor="#333333"
-                                android:textSize="13sp"
-                                android:layout_marginTop="3dp" />
+                                android:textSize="13sp" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- Row 3: Pending (half-width, same size as other cards, sits under Pre-Approved) -->
+                <!-- Row 3: Pending (half-width, under Pre-Approved) -->
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <View android:layout_width="10dp" android:layout_height="1dp" />
+                    <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pendingBox"
+                    android:layout_width="181dp"
+                    android:layout_height="76dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/badge_pending"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:layout_marginTop="10dp">
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_clock"
+                        android:tint="#111111" />
 
                     <LinearLayout
-                        android:id="@+id/pendingBox"
-                        android:layout_width="0dp"
-                        android:layout_height="76dp"
-                        android:layout_weight="1"
-                        android:orientation="horizontal"
-                        android:background="@drawable/badge_pending"
-                        android:padding="14dp"
-                        android:gravity="center_vertical">
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
 
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:src="@drawable/ic_clock"
-                            android:tint="#111111" />
-
-                        <LinearLayout
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_marginStart="10dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Pending"
-                                android:textColor="#111111"
-                                android:textStyle="bold"
-                                android:textSize="14sp" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="10"
-                                android:textColor="#333333"
-                                android:textSize="13sp"
-                                android:layout_marginTop="3dp" />
-                        </LinearLayout>
+                            android:text="Pending"
+                            android:textColor="#111111"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="10"
+                            android:textColor="#333333"
+                            android:textSize="13sp" />
                     </LinearLayout>
-
-                    <!-- Empty spacer takes right half so Pending matches other card widths -->
-                    <View
-                        android:layout_width="10dp"
-                        android:layout_height="1dp" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="1dp"
-                        android:layout_weight="1" />
                 </LinearLayout>
-
             </LinearLayout>
 
-            <!-- ======== RECENT ACTIVITY SECTION ======== -->
+            <!-- ======== RECENT ACTIVITY ======== -->
             <TextView
                 android:id="@+id/recentTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Recent Activity"
-                android:textSize="17sp"
-                android:textStyle="bold"
-                android:textColor="#111111"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="22dp" />
+                android:layout_marginTop="22dp"
+                android:text="Recent Activity"
+                android:textColor="#111111"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
-            <!-- Search Bar -->
-            <LinearLayout
-                android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
                 android:layout_height="46dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
                 android:background="@drawable/search_bg"
-                android:orientation="horizontal"
                 android:gravity="center_vertical"
+                android:orientation="horizontal"
                 android:paddingStart="14dp"
                 android:paddingEnd="12dp">
 
@@ -339,26 +334,26 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:hint="Search"
                     android:background="@null"
-                    android:textSize="14sp"
+                    android:hint="Search"
+                    android:importantForAutofill="no"
+                    android:singleLine="true"
                     android:textColor="#111111"
                     android:textColorHint="#AAAAAA"
-                    android:singleLine="true"
-                    android:importantForAutofill="no" />
+                    android:textSize="14sp" />
 
                 <View
                     android:layout_width="1dp"
                     android:layout_height="20dp"
-                    android:background="#DDDDDD"
-                    android:layout_marginEnd="10dp" />
+                    android:layout_marginEnd="10dp"
+                    android:background="#DDDDDD" />
 
                 <ImageView
                     android:layout_width="18dp"
                     android:layout_height="18dp"
+                    android:layout_marginEnd="12dp"
                     android:src="@drawable/ic_filter"
-                    android:tint="#888888"
-                    android:layout_marginEnd="12dp" />
+                    android:tint="#888888" />
 
                 <ImageView
                     android:layout_width="18dp"
@@ -368,59 +363,56 @@
             </LinearLayout>
 
             <!-- ======== GLASS RECENT ACTIVITY CARD ======== -->
-            <LinearLayout
+        <LinearLayout
                 android:id="@+id/recentCard"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_marginTop="14dp"
+                android:layout_marginEnd="20dp"
                 android:background="@drawable/glass_card_bg"
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <!-- Row 1: Pass ID + Approved badge -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Pass ID:"
                             android:textColor="#666666"
-                            android:textSize="11sp"
-                            android:textStyle="bold" />
+                            android:textSize="11sp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
                             android:text="ID-12345678"
                             android:textColor="#111111"
-                            android:textStyle="bold"
                             android:textSize="14sp"
-                            android:layout_marginTop="2dp" />
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/badge_approved"
+                        android:paddingStart="12dp"
+                        android:paddingTop="6dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="6dp"
                         android:text="✓  Approved"
                         android:textColor="@color/approved_text"
                         android:textSize="12sp"
-                        android:textStyle="bold"
-                        android:background="@drawable/badge_approved"
-                        android:paddingStart="12dp"
-                        android:paddingEnd="12dp"
-                        android:paddingTop="6dp"
-                        android:paddingBottom="6dp" />
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <View
@@ -430,45 +422,42 @@
                     android:layout_marginBottom="14dp"
                     android:background="#C2C8D0" />
 
-                <!-- Row 2: Date & Time + Check Out button -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Date &amp; Time"
                             android:textColor="#666666"
-                            android:textSize="11sp"
-                            android:textStyle="bold" />
+                            android:textSize="11sp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
                             android:text="12th March 2026, 12:30pm"
                             android:textColor="#111111"
-                            android:textStyle="bold"
                             android:textSize="13sp"
-                            android:layout_marginTop="2dp" />
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <com.google.android.material.button.MaterialButton
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
-                        android:text="Check Out"
-                        android:textColor="#FFFFFF"
-                        android:textSize="12sp"
-                        android:textAllCaps="false"
                         android:insetTop="0dp"
                         android:insetBottom="0dp"
+                        android:text="Check Out"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
                         app:backgroundTint="#27374D"
                         app:cornerRadius="8dp" />
                 </LinearLayout>
@@ -480,52 +469,48 @@
                     android:layout_marginBottom="14dp"
                     android:background="#C2C8D0" />
 
-                <!-- Row 3: Guest Name + View Details button -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Guest Name"
                             android:textColor="#666666"
-                            android:textSize="11sp"
-                            android:textStyle="bold" />
+                            android:textSize="11sp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
                             android:text="Moiz Imran"
                             android:textColor="#111111"
-                            android:textStyle="bold"
                             android:textSize="13sp"
-                            android:layout_marginTop="2dp" />
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <com.google.android.material.button.MaterialButton
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
-                        android:text="View Details"
-                        android:textColor="#333333"
-                        android:textSize="12sp"
-                        android:textAllCaps="false"
                         android:insetTop="0dp"
                         android:insetBottom="0dp"
+                        android:text="View Details"
+                        android:textAllCaps="false"
+                        android:textColor="#333333"
+                        android:textSize="12sp"
                         app:backgroundTint="#DDE1E7"
+                        app:cornerRadius="8dp"
                         app:strokeColor="#B2B8C2"
-                        app:strokeWidth="1dp"
-                        app:cornerRadius="8dp" />
+                        app:strokeWidth="1dp" />
                 </LinearLayout>
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
 
@@ -534,39 +519,39 @@
         android:id="@+id/bottomNav"
         android:layout_width="0dp"
         android:layout_height="72dp"
-        android:orientation="horizontal"
         android:background="#FFFFFF"
-        android:elevation="10dp"
         android:clipChildren="false"
         android:clipToPadding="false"
+        android:elevation="10dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <!-- Home (default active: filled icon, dark tint) -->
+        <!-- Home -->
         <LinearLayout
             android:id="@+id/navHome"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
             <ImageView
                 android:id="@+id/navHomeIcon"
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:src="@drawable/ic_home_filled"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:src="@drawable/home"
                 android:tint="#27374D" />
             <TextView
                 android:id="@+id/navHomeText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
                 android:text="Home"
-                android:textSize="10sp"
                 android:textColor="#27374D"
-                android:layout_marginTop="3dp" />
+                android:textSize="12sp" />
         </LinearLayout>
 
         <!-- Scan -->
@@ -575,18 +560,16 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
             android:clickable="true"
-            android:focusable="true">
-
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
             <ImageView
                 android:id="@+id/navScanIcon"
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:src="@drawable/ic_scan"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:src="@drawable/qr_code_scanner"
                 android:tint="#000000" />
-
             <TextView
                 android:id="@+id/navScanText"
                 android:layout_width="wrap_content"
@@ -594,34 +577,33 @@
                 android:layout_marginTop="3dp"
                 android:text="Scan"
                 android:textColor="#000000"
-                android:textSize="10sp" />
+                android:textSize="12sp" />
         </LinearLayout>
 
-        <!-- Create Entry (center, elevated above nav) -->
+        <!-- Create Entry (center, elevated) -->
         <LinearLayout
             android:id="@+id/navCreateEntry"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
             android:layout_marginTop="-14dp"
-            android:clipChildren="false"
             android:clickable="true"
-            android:focusable="true">
+            android:clipChildren="false"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
             <ImageView
                 android:layout_width="52dp"
                 android:layout_height="52dp"
-                android:src="@drawable/ic_add_circle"
-                android:scaleType="fitCenter" />
-
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_add_circle" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
                 android:text="Create Entry"
                 android:textColor="#000000"
-                android:textSize="9sp" />
+                android:textSize="12sp" />
         </LinearLayout>
 
         <!-- Passes -->
@@ -630,26 +612,24 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
             android:clickable="true"
-            android:focusable="true">
-
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
             <ImageView
                 android:id="@+id/navPassesIcon"
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:src="@drawable/ic_passes"
-                android:tint="#000000" />
-
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:src="@drawable/file"
+                />
             <TextView
                 android:id="@+id/navPassesText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
                 android:text="Passes"
-                android:textColor="#111111"
-                android:textSize="10sp" />
+                android:textColor="#000000"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <!-- Profile -->
@@ -658,18 +638,16 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
             android:clickable="true"
-            android:focusable="true">
-
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
             <ImageView
                 android:id="@+id/navProfileIcon"
-                android:layout_width="22dp"
-                android:layout_height="22dp"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
                 android:src="@drawable/ic_profile"
-                android:tint="#000000" />
-
+                android:tint="#111111" />
             <TextView
                 android:id="@+id/navProfileText"
                 android:layout_width="wrap_content"
@@ -677,8 +655,7 @@
                 android:layout_marginTop="3dp"
                 android:text="Profile"
                 android:textColor="#000000"
-                android:textSize="10sp" />
+                android:textSize="12sp" />
         </LinearLayout>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,379 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:background="#FFFFFF"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<ScrollView
+		android:id="@+id/rmti8r1amksb"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:background="#F8FAFC"
+		android:paddingTop="51dp">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+			<LinearLayout
+				android:id="@+id/rlds4ry3x18n"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_vertical"
+				android:layout_marginBottom="54dp"
+				android:layout_marginHorizontal="25dp"
+				android:orientation="horizontal">
+				<ImageView
+					android:id="@+id/btn_back"
+					android:layout_width="32dp"
+					android:layout_height="32dp"
+					android:src="@drawable/keyboard_backspace"
+					android:scaleType="fitXY"
+					/>
+				<View
+					android:layout_width="0dp"
+					android:layout_height="0dp"
+					android:layout_weight="1"
+					/>
+
+				<TextView
+					android:id="@+id/r3c56ymg6qp5"
+					android:layout_width="wrap_content"
+					android:layout_height="45dp"
+					android:text="Profile\n"
+					android:textColor="#27374D"
+					android:textSize="24sp"
+					android:textStyle="bold" />
+
+				<View
+					android:layout_width="0dp"
+					android:layout_height="0dp"
+					android:layout_weight="1"
+					/>
+				<LinearLayout
+					android:id="@+id/rlu9dlf5bri"
+					android:layout_width="32dp"
+					android:layout_height="32dp"
+					android:orientation="vertical">
+				</LinearLayout>
+			</LinearLayout>
+			<TextView
+				android:id="@+id/r1n1v536vtum"
+				android:textColor="#000000"
+				android:textSize="20sp"
+				android:textStyle="bold"
+				android:layout_marginBottom="27dp"
+				android:layout_marginStart="25dp"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="Profile Details"
+				/>
+
+			<LinearLayout
+				android:id="@+id/rak8sojudkqs"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="22dp"
+				android:layout_marginBottom="43dp"
+				android:background="@drawable/s00000040sw1cr12lr270ebebeb66aaaaaa1a"
+				android:orientation="vertical"
+				android:paddingVertical="15dp"
+				>
+
+				<LinearLayout
+					android:id="@+id/r4d2su5dxd76"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="19dp"
+					android:layout_marginBottom="22dp"
+					android:gravity="center_vertical"
+					android:orientation="horizontal">
+
+					<TextView
+						android:id="@+id/rdvksh1dy8ob"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginEnd="14dp"
+						android:text="Name"
+						android:textColor="#000000"
+						android:textSize="18sp" />
+
+					<TextView
+						android:id="@+id/rl7asvxhvmst"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Guard 1"
+						android:textColor="#000000"
+						android:textSize="18sp" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:id="@+id/rcwvgrri7sno"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="19dp"
+					android:layout_marginBottom="22dp"
+					android:gravity="center_vertical"
+					android:orientation="horizontal">
+
+					<TextView
+						android:id="@+id/rcajx0pxohqn"
+						android:layout_width="170dp"
+						android:layout_height="wrap_content"
+						android:layout_marginEnd="11dp"
+						android:layout_weight="1"
+						android:text="Assigned ID"
+						android:textColor="#000000"
+						android:textSize="18sp" />
+
+					<TextView
+						android:id="@+id/rm2ll5tptppq"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginEnd="11dp"
+						android:layout_weight="1"
+						android:text="ID-123456"
+						android:textColor="#000000"
+						android:textSize="18sp" />
+
+					<LinearLayout
+						android:id="@+id/ra37531q767f"
+						android:layout_width="0dp"
+						android:layout_height="22dp"
+						android:layout_weight="1"
+						android:orientation="vertical"></LinearLayout>
+				</LinearLayout>
+
+				<LinearLayout
+					android:id="@+id/rwirm74l59y"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="19dp"
+					android:layout_marginBottom="27dp"
+					android:gravity="center_vertical"
+					android:orientation="horizontal">
+
+					<TextView
+						android:id="@+id/rlaqu8v9p7tm"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginEnd="10dp"
+						android:text="Shift Details"
+						android:textColor="#000000"
+						android:textSize="18sp" />
+
+					<TextView
+						android:id="@+id/r61hqqp5ho2"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="12:00PM-5:00PM"
+						android:textColor="#000000"
+						android:textSize="18sp" />
+				</LinearLayout>
+			</LinearLayout>
+
+			<TextView
+				android:id="@+id/rq4n8yzs1zeb"
+				android:textColor="#000000"
+				android:textSize="20sp"
+				android:textStyle="bold"
+				android:layout_marginBottom="18dp"
+				android:layout_marginStart="22dp"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="App Settings &amp; Accessibility"
+				/>
+
+			<LinearLayout
+				android:id="@+id/rdlbxnrgdogw"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="22dp"
+				android:layout_marginBottom="43dp"
+				android:background="@drawable/s00000040sw1cr12lr270ebebeb66aaaaaa1a"
+				android:orientation="vertical"
+				android:paddingVertical="15dp"
+				android:paddingLeft="5sp"
+				>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="22dp"
+					android:gravity="center_vertical"
+					android:orientation="horizontal"
+					android:paddingStart="12dp"
+					android:paddingEnd="12dp">
+
+					<TextView
+						android:id="@+id/rietcq6xqhcs"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:text="Notifications"
+						android:textColor="#000000"
+						android:textSize="18sp" />
+
+					<ImageView
+						android:id="@+id/toggle_notifications"
+						android:layout_width="40dp"
+						android:layout_height="40dp"
+						android:layout_marginStart="8dp"
+						android:contentDescription="Notifications toggle"
+						android:scaleType="centerInside"
+						android:src="@drawable/toggleleft" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="22dp"
+					android:gravity="center_vertical"
+					android:orientation="horizontal"
+					android:paddingStart="12dp"
+					android:paddingEnd="12dp">
+
+					<TextView
+						android:id="@+id/rkzybowfdufr"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:text="Dark Mode"
+						android:textColor="#000000"
+						android:textSize="18sp" />
+
+					<ImageView
+						android:id="@+id/toggle_dark_mode"
+						android:layout_width="40dp"
+						android:layout_height="40dp"
+						android:layout_marginStart="8dp"
+						android:contentDescription="Dark mode toggle"
+						android:scaleType="centerInside"
+						android:src="@drawable/toggleleft" />
+				</LinearLayout>
+			</LinearLayout>
+
+			<TextView
+				android:id="@+id/rqve9lopr2hr"
+				android:textColor="#000000"
+				android:textSize="20sp"
+				android:textStyle="bold"
+				android:layout_marginBottom="18dp"
+				android:layout_marginStart="22dp"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="Support &amp; Emergency"
+				/>
+			<LinearLayout
+				android:id="@+id/r65a2nhnv94k"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@drawable/s00000040sw1cr12lr270ebebeb66aaaaaa1a"
+				android:paddingVertical="26dp"
+				android:paddingRight="31dp"
+				android:layout_marginBottom="43dp"
+				android:layout_marginHorizontal="22dp"
+				android:orientation="vertical">
+				<LinearLayout
+					android:id="@+id/r5zg9i1xjktw"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:layout_marginBottom="13dp"
+					android:layout_marginStart="11dp"
+					android:orientation="horizontal">
+					<TextView
+						android:id="@+id/r66uj1ccnswo"
+						android:textColor="#000000"
+						android:textSize="18sp"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:text="Contact Supervisor"
+						/>
+					<View
+						android:layout_width="0dp"
+						android:layout_height="0dp"
+						android:layout_weight="1"
+						/>
+					<LinearLayout
+						android:id="@+id/btn_call_admin"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical"
+						android:background="@drawable/s00000012sw1cr8b374d5e"
+						android:padding="8dp"
+						android:clickable="true"
+						android:focusable="true"
+						android:orientation="horizontal">
+						<ImageView
+							android:id="@+id/rnat2xjp9z"
+							android:layout_width="17dp"
+							android:layout_height="17dp"
+							android:layout_marginEnd="5dp"
+							android:src="@drawable/phone"
+							android:scaleType="fitXY"
+							/>
+						<TextView
+							android:id="@+id/ry0rzzlwtzi"
+							android:textColor="#FFFFFF"
+							android:textSize="12sp"
+							android:textStyle="bold"
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:text="Call Admin"
+							/>
+					</LinearLayout>
+				</LinearLayout>
+				<LinearLayout
+					android:id="@+id/rumbef7iep9"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:layout_marginStart="11dp"
+					android:orientation="horizontal">
+					<TextView
+						android:id="@+id/rqeeuq3n2bop"
+						android:textColor="#000000"
+						android:textSize="18sp"
+						android:layout_marginEnd="142dp"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:text="App Version"
+						/>
+					<TextView
+						android:id="@+id/r95aswxvmlsv"
+						android:textColor="#000000"
+						android:textSize="15sp"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:text="V2.0"
+						/>
+				</LinearLayout>
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/btn_logout"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal"
+				android:background="@drawable/s000000sw1cr8b27374d"
+				android:paddingVertical="11dp"
+				android:layout_marginBottom="48dp"
+				android:layout_marginHorizontal="33dp"
+				android:clickable="true"
+				android:focusable="true"
+				android:orientation="vertical">
+				<TextView
+					android:id="@+id/ruxoeyorhhbs"
+					android:textColor="#FFFFFF"
+					android:textSize="20sp"
+					android:textStyle="bold"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="Logout"
+					/>
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

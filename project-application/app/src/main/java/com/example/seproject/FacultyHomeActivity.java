@@ -1,5 +1,6 @@
 package com.example.seproject;
 
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.os.Bundle;
@@ -41,22 +42,32 @@ public class FacultyHomeActivity extends AppCompatActivity {
         navDownload.setOnClickListener(v      -> activateTab(1));
         navSubmitRequest.setOnClickListener(v -> activateTab(2));
         navPasses.setOnClickListener(v        -> activateTab(3));
-        navProfile.setOnClickListener(v       -> activateTab(4));
+        navProfile.setOnClickListener(v -> {
+            activateTab(4);
+            startActivity(new Intent(FacultyHomeActivity.this, ProfileActivity.class));
+        });
 
+        activateTab(0);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Reset to dashboard tab when coming back from ProfileActivity.
         activateTab(0);
     }
 
     private void activateTab(int tab) {
         int[] outlineIcons = {
-            R.drawable.ic_home,
+            R.drawable.home,
             R.drawable.ic_download,
-            R.drawable.ic_passes,
+            R.drawable.file,
             R.drawable.ic_profile
         };
         int[] filledIcons = {
-            R.drawable.ic_home_filled,
+            R.drawable.home_filled,
             R.drawable.ic_download_filled,
-            R.drawable.ic_passes_filled,
+            R.drawable.file_filled,
             R.drawable.ic_profile_filled
         };
 
